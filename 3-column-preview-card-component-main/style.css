@@ -1,0 +1,103 @@
+/* reset css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+.cards-list{
+    max-width: 921px;
+    display: flex;
+    border-radius: 7px;
+    overflow: hidden;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.card{
+    padding: 50px 60px 45px 45px
+}
+
+.card-1{
+    background-color: hsl(31, 77%, 52%);
+}
+.card-1 > .learn-more-btn{
+    color: hsl(31, 77%, 52%);
+}
+
+.card-2{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card-2 > .learn-more-btn{
+    color: hsl(184, 100%, 22%);
+}
+
+.card-3{
+    background-color: hsl(179, 100%, 13%);
+}
+.card-3 > .learn-more-btn{
+    color: hsl(179, 100%, 13%);
+}
+
+.card-img{
+    height: 40px;
+
+}
+
+.card-title{
+    margin: 40px 0;
+    font-size: 40px;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+        
+}
+
+.card-detail{
+    
+    line-height: 1.7;
+    margin-bottom: 85px;
+}
+
+.learn-more-btn{
+    color: transparent;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 50px;
+    display: inline-block;
+    border: solid 2px transparent;
+}
+
+.learn-more-btn:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+    border: solid 2px hsl(0, 0%, 95%);
+}
+@media (max-width: 375px){
+    .container{
+        padding: 90px 25px;
+    }
+    .cards-list{
+        flex-direction: column;
+    }
+    .card{
+        padding: 45px 50px;
+    }
+    .card-detail{
+        margin-bottom: 30px;
+    }
+}

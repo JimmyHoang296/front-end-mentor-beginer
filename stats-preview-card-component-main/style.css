@@ -1,0 +1,144 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 85px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.preview-card{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1110px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(244, 38%, 16%);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.preview-card-img{
+    width: 43%;
+    flex-shrink: 1;
+    position: relative;
+    /* width:47%; */
+}
+
+.destop-img{
+    display: block;
+    position:absolute;
+    /* width: 100%; */
+    min-height: 397px;
+}
+
+.color-layer{
+    display: block;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 150%, 30%, 0.7);
+    z-index: 5;
+}
+
+.mobile-img{
+    display: none;
+}
+
+.preview-card-info{
+    width:53%;
+    flex-grow: 2;
+    max-width: 570px;
+    padding: 6% 6.5% 5.5% 6.5%;
+}
+.caption{
+    color:hsl(0, 0%, 100%) ;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    line-height: 1.3;
+}
+.caption span{
+    color:hsl(277, 64%, 61%) ;
+}
+.detail{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding-right: 50px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+.stats-list{
+    margin: 0 -6px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stat{
+    margin: 0 6px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.stat-number{
+    color:hsl(0, 0%, 100%) ;
+    
+}
+
+.stat-name{
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+@media (max-width:375px){
+    .preview-card{
+        flex-direction: column;
+    }
+    .preview-card-img{
+        width: 100%;
+    }
+    .destop-img{
+        display: none;
+    }
+
+    .mobile-img{
+        display: block;
+        width: 100%;
+    }
+
+    .preview-card-info{
+        width: 100%;
+        text-align: center;
+        padding: 40px 35px 5px 35px;
+    }
+
+    .caption{
+        font-size: 28px;
+    }
+
+    .detail{
+        padding:0;
+        margin: 24px 0 48px;
+    }
+
+    .stats-list{
+        flex-direction: column;
+        padding: 0;
+    }
+}

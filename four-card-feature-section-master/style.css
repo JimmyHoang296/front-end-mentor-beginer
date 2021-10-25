@@ -1,0 +1,134 @@
+/* reset css */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    color: hsl(229, 6%, 66%);
+}
+
+.intro{
+    max-width: 510px;
+    margin: 0 -20px 60px -20px;
+    padding: 0 -20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.slogan{
+    font-size: 36px;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.powered-by{
+    font-size: 36px;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 15px;
+}
+
+.text-m{
+    font-size: 15px;
+}
+
+.cards-list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.card{
+    position: relative;
+    max-width: 350px;
+    padding: 25px 30px;
+    background-color: white;
+    box-shadow: 0 10px 20px 0px hsla(234, 12%, 34%,0.4);
+}
+
+.card::after{
+    position:absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: calc(100% - 3px);
+    /* width: 200px; */
+    height: 5px;
+    transform: perspective(9px) rotateX(3deg); 
+}
+.red-line::after{
+    background: hsl(0, 78%, 62%);
+}
+
+.cyan-line::after{
+    background: hsl(180, 62%, 55%);
+}
+
+.orange-line::after{
+    background:hsl(34, 97%, 64%);
+}
+
+.blue-line::after{
+    background: hsl(212, 86%, 64%);
+}
+
+.card-title{
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 15px;
+}
+
+.text-s{
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.card-img{
+    float: right;
+}
+
+.middle-group-card{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+
+@media (max-width: 375px){
+    .main{
+        padding: 70px 30px;
+    }
+
+    .intro{
+        margin: 0;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+    .powered-by,
+    .slogan{
+        font-size: 24px;
+    }
+
+    .cards-list{
+        flex-direction: column
+    }
+
+    .card-title{
+        margin-bottom: 5px;
+    }
+
+    .card-img{
+        width: 56px;
+    }
+};
+    

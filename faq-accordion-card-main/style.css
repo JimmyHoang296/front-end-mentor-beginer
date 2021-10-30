@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+
+.card{
+    position: relative;
+    display: flex;
+    max-width: 922px;
+    width: 87%;
+    border-radius: 20px;
+    /* background: url(./images/bg-pattern-desktop.svg) -570px -290px no-repeat; */
+    background-color: white;
+    background-size: auto;
+}
+
+.hero{
+    width: 45%;
+    position: relative;
+    background: url(./images/illustration-woman-online-desktop.svg) -70px 70px no-repeat,url(./images/bg-pattern-desktop.svg) -570px -290px no-repeat ;
+
+}
+
+.hero-desktop{
+    display: none;
+    position: relative;
+    top: 70px;
+    left:-80px
+}
+
+.box{
+    position: absolute;
+    left: -90px;
+    top: 200px;
+}
+
+.hero-mobile{
+    display: none;
+}
+
+.accordion{
+    width: 55%;
+    padding: 70px 8%;
+    color: hsl(237, 12%, 33%);
+}
+
+.accordion-header{
+    font-size: 32px;
+    color: hsl(238, 29%, 16%);
+    margin-bottom: 20px;
+}
+
+.q-a{
+    position: relative;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 17px 0;
+}
+.arror-icon:hover + .question,
+.question:hover{
+    color:hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+.arror-icon{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.question{
+    color: hsl(238, 29%, 16%);
+    font-size: 14px;
+    padding-right: 25px;
+}
+
+.show .answer{
+    display: block;
+}
+
+.show .question{
+    font-weight: 700;
+}
+
+.show .arror-icon{
+    transform: rotate(180deg);
+}
+
+.question:hover{
+}
+.answer{
+    display: none;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 375px){
+    main{
+        padding-top: 150px;
+
+    }
+    .card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero{
+        margin-top: -105px;
+        width: 240px;
+        height: 210px;
+        background: url(./images/illustration-woman-online-mobile.svg)   center top no-repeat , url(./images/bg-pattern-mobile.svg) center bottom no-repeat;
+        background-size: contain;
+
+    }
+
+    .accordion{
+        width: 100%;
+        padding: 30px 25px;
+    }
+
+    .accordion-header{
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .question{
+        font-size: 13px;
+    }
+    .box{
+        display: none;
+    }
+}
